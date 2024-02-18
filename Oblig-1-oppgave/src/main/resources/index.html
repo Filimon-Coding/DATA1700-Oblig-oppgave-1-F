@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="ticketForm">
+    <div>
+        <h1>Movie Ticket Booking</h1>
+    </div>
+
+    <div>
+        <label for="movieNames">Select movie:</label>
+        <select name="movieNames" id="movieNames">
+            <option value="" disabled selected>Select a movie...</option>
+            <option value="SuperMan">Superman</option>
+            <option value="Batman">Batman</option>
+            <option value="SuperGirl">Supergirl</option>
+            <option value="Batwoman">Batwoman</option>
+        </select>
+        <span id="movieAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter the number of tickets"/>
+        <span id="quantityAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" name="firstName" placeholder="Enter your first name" />
+        <span id="firstNameAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" name="lastName" placeholder="Enter your last name" />
+        <span id="lastNameAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" name="phoneNumber" placeholder="Enter numbers only"/>
+        <span id="phoneAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="remember to include user@example.com"/>
+        <span id="emailAdv" class="validation-error"></span>
+    </div>
+
+    <div>
+        <button type="button" id="buyTicket" onclick="addTicket()">Buy Ticket</button>
+    </div>
+
+    <div>
+        <h3>All Tickets</h3>
+        <div id="allTickets"></div>
+    </div>
+
+    <div>
+        <button type="button" onclick="deleteAllTickets()" id="deleteTicket">Delete all tickets</button>
+    </div>
+</form>
+<script src="index.js"></script>
+</body>
+</html>
